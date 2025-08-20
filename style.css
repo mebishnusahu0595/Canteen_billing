@@ -1,0 +1,226 @@
+/* Modal styles for bill popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(21,101,192,0.18);
+    animation: fadeIn 0.4s;
+}
+.modal-content {
+    background: #fff;
+    margin: 6vh auto;
+    padding: 32px 18px 24px 18px;
+    border-radius: 16px;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(21,101,192,0.18);
+    position: relative;
+    animation: fadeIn 0.5s;
+}
+.close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-size: 2rem;
+    color: #1565c0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.close:hover {
+    color: #1976d2;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #ffffff 100%);
+    margin: 0;
+    padding: 0;
+    color: #1a237e;
+}
+/* Full width container, no card style */
+/* Improved container padding and centering */
+.container {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 auto;
+    background: #fff;
+    padding: 32px 16px 48px 16px;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    animation: fadeIn 0.7s;
+    box-sizing: border-box;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+h1, h2 {
+    text-align: center;
+    color: #1565c0;
+    margin-bottom: 18px;
+}
+/* Better spacing between form groups */
+.form-group {
+    margin-bottom: 24px;
+    padding: 0 8px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1a237e;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+input, select, button {
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #b3d1ff;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    margin-bottom: 4px;
+}
+input:focus, select:focus {
+    border-color: #1565c0;
+    outline: none;
+}
+button {
+    background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+button:hover {
+    background: linear-gradient(90deg, #1565c0 60%, #1976d2 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+#search-bar {
+    border: 1.5px solid #90caf9;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background: #e3f0ff;
+    color: #1a237e;
+}
+/* Product row spacing and hover effect */
+.product-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 10px;
+    border-bottom: 1px solid #e3f0ff;
+    transition: background 0.2s;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+.product-row:hover {
+    background: #e3f0ff;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.04);
+}
+.product-row label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+/* Quantity input spacing */
+.product-qty {
+    width: 70px;
+    margin-left: 14px;
+    border: 1px solid #90caf9;
+    background: #f5faff;
+    color: #1a237e;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+    padding: 10px 8px;
+}
+.product-qty:focus {
+    border-color: #1565c0;
+}
+/* Custom checkbox styling */
+.product-check {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #1976d2;
+    border-radius: 6px;
+    background: #fff;
+    margin-right: 10px;
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.product-check:checked {
+    border-color: #1565c0;
+    background: #1976d2;
+    box-shadow: 0 0 0 2px #e3f0ff;
+}
+.product-check:checked::after {
+    content: '\2713';
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/* Bill section and content padding */
+#bill-section {
+    margin-top: 36px;
+    background: #e3f0ff;
+    padding: 28px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+    animation: fadeIn 0.7s;
+}
+#bill-content {
+    font-family: 'Courier New', Courier, monospace;
+    background: #fff;
+    padding: 20px 14px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    border: 1px solid #b3d1ff;
+    color: #1565c0;
+    font-size: 1.08rem;
+    box-shadow: 0 1px 4px rgba(21,101,192,0.08);
+}
+@media (max-width: 600px) {
+    .container {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 8px 2px 24px 2px;
+    }
+    h1, h2 {
+        font-size: 1.15rem;
+    }
+    .form-group {
+        padding: 0 2px;
+    }
+    .product-row {
+        padding: 10px 2px;
+    }
+    .product-row label {
+        font-size: 0.93rem;
+    }
+    #bill-content {
+        font-size: 0.95rem;
+        padding: 12px 4px;
+    }
+    #bill-section {
+        padding: 16px 4px;
+    }
+}
