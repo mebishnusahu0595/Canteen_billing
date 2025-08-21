@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     color: #1a237e;
+    min-height: 100vh;
+    background-attachment: fixed;
 }
 .container.two-col {
     width: 100%;
@@ -25,7 +27,7 @@ body {
     min-width: 320px;
     background: #f7faff;
     border-radius: 12px;
-    padding: 24px 18px;
+    padding: 20px 18px 24px 18px;
     box-shadow: 0 2px 8px rgba(21,101,192,0.06);
     border: 1px solid #e3f0ff;
 }
