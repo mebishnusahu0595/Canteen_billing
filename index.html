@@ -8,12 +8,15 @@
 </head>
 <body>
     <div class="container two-col">
-        <div class="left-panel">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h1>College Canteen Billing</h1>
-                <a href="history.html" class="back-btn" style="margin-bottom: 0;">History</a>
-            </div>
-            <div class="form-group">
+            <div class="left-panel">
+                <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 32px;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 12px;">
+                        <img src="chai.png" alt="Chai" style="height: 48px; width: 48px; object-fit: contain; margin-right: 8px;">
+                        <h1 style="margin: 0;">College Canteen Billing</h1>
+                    </div>
+                    <a href="history.html" class="back-btn" style="margin-top: 16px;">History</a>
+                </div>
+            <div class="form-group" style="margin-top: 24px;">
                 <label>Products:</label>
                 <input type="text" id="search-bar" placeholder="Search products..." style="margin-bottom:10px;">
                 <div id="product-list">
@@ -30,7 +33,7 @@
                 </div> -->
             </div>
         </div>
-        <div class="right-panel">
+    <div class="right-panel">
             <h2>Live Bill</h2>
             <div id="bill-preview"></div>
             <div class="form-group" style="margin-top: 12px;">
